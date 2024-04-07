@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}load file{% endblock %}
+{% block content %}
+<form action="" method="post" enctype="multipart/form-data" class="form">
+    {% csrf_token %}
+    <h2>Загрузите файл</h2>
+    <div> {{ form.non_field_errors }}</div>
+    {% for f in form %}
+    <p><label class="label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+    <div class="form-error">{{ f.errors }}</div>
+    {% endfor %}
+    <button type="submit">Загрузить</button>
+    <div>
+        <button name="hh">
+            <p>Связаться с нами
+                <a href="https://spb.hh.ru/resume/470b7c08ff0be7838d0039ed1f594f75313234">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/HeadHunter_logo.png">
+                </a>
+            </p>
+        </button>
+    </div>
+
+
+</form>
+{% endblock %}
