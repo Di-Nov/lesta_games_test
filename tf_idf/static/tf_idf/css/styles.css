@@ -18,9 +18,9 @@ body {
 }
 
 h2 {
-    margin: 10px 0;
+    margin: auto;
     padding-bottom: 10px;
-    width: 180px;
+    width: 500px;
     color: #78788c;
     border-bottom: 3px solid #78788c
 }
@@ -75,14 +75,14 @@ div button img {
 }
 
 .table {
+    margin: auto;
     width: 500px;
     border: none;
-    margin-bottom: 20px;
 }
 
 .table thead th {
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     border: none;
     padding: 10px 15px;
     background: #d8d8d8;
@@ -92,7 +92,7 @@ div button img {
 }
 
 .table tbody td {
-    text-align: left;
+    text-align: center;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
     padding: 10px 15px;

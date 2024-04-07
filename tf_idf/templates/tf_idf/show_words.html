@@ -2,7 +2,7 @@
 
 {% block title %}load file{% endblock %}
 {% block content %}
-<h2>Результат выборки слов по </h2>
+<h2>Результат выборки слов по TF-IDF </h2>
 {% if result %}
     <table class="table">
         <thead>
@@ -14,14 +14,12 @@
             </tr>
         </thead>
         {% for word in result %}
-<!--            <tbody>-->
                 <tr>
                     <td class="table">{{forloop.counter}}</td>
                     <td class="table">{{word.name}}</td>
-                    <td class="table">{{word.tf|floatformat:2}}</td>
-                    <td class="table">{{word.idf|floatformat:2}}</td>
+                    <td class="table">{{word.tf|floatformat:3}}</td>
+                    <td class="table">{{word.idf|floatformat:3}}</td>
                 </tr>
-<!--            </tbody>-->
         {% endfor %}
     </table>
 {% else %}

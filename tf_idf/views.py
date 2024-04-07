@@ -5,7 +5,6 @@ import uuid
 from tf_idf.forms import LoadFileForm
 import random
 
-
 def get_tf_idf(arr: list[str]) -> list:
     """
     Преобразовываем список из слов в список из словаря из уникальных слов (unic_words), tf и random_idf.
@@ -83,5 +82,5 @@ def load_file(request):
 def show_words(request, name):
     list_words = good_func(name)
     result = get_tf_idf(list_words)
-    sorted_result = sorted(result, key=lambda x: x['idf'])
+    sorted_result = sorted(result, key=lambda x: x['idf'], reverse=True)[:50]
     return render(request, 'tf_idf/show_words.html', context={'result': sorted_result})
